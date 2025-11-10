@@ -1,23 +1,26 @@
-marks1 = 40
-marks2 = 60
-marks3 = 80
-marks4 = 95
-marks5 = 100
+
+marks = []
+for i in range(1, 6):
+    mark = float(input(f"Enter marks {i}: "))
+    marks.append(mark)
+
+average = sum(marks) / 5
 
 
-sum=marks1+marks2+marks3+marks4+marks5
-avg=sum/5
+if average >= 90:
+    grade = "A"
+elif average >= 80:
+    grade = "B"
+elif average >= 70:
+    grade = "C"
+elif average >= 60:
+    grade = "D"
+elif average >= 50:
+    grade = "E"
+else:
+    grade = "FAIL"
 
-if avg >= 90:
-    print("Grade: A")
-elif avg >= 80:
-    print("Grade: B")
-elif avg >= 70:
-    print("Grade: C")
-elif avg >= 60:
-    print("Grade: D")
-elif avg >= 50:
-    print("Grade: E")
-else :
-    print("Grade: F")
 
+print("\n--- Result ---")
+print(f"Average Marks: {average:.2f}")
+print(f"Grade: {grade}")
